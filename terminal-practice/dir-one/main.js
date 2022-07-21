@@ -1,7 +1,7 @@
-document.addEventListener("name")
+document.addEventListener("submit", #name)
 const string = document.querySelector("#name").value
 
 
-function hello(string){
-	return "hello " + string
+function hello(string){ 
+	console.log("hello " + string)
 } 
