@@ -13,7 +13,8 @@ function createDropDown(){
         option.append(colors[i]);
         dropDown.append(option);
     } 
-    dropDown.onchange = function changeColor() {
+    dropDown.onchange = changeColor
+    function changeColor() {
             dropDown.parentElement.setAttribute("class", colors[dropDown.selectedIndex]); 
         } 
     return dropDown; 
