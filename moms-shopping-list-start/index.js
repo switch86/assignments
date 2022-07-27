@@ -11,31 +11,33 @@ addItem.addEventListener("submit", (event) => {
     var itemText = document.createElement("div")
     var edit = document.createElement("button")
     var del = document.createElement("button")
-    li.setAttribute("class", newItem)
     edit.setAttribute("class", "edit")
     del.setAttribute("class", "delete")
     itemText.textContent = newItem
     edit.textContent = "Edit"
     edit.addEventListener("click", (event) => {
         event.preventDefault;
-        var editForm = document.createElement("form")
+        var updateForm = document.createElement("form")
         var editInput = document.createElement("input")
         var saveButton = document.createElement("button")
         saveButton.textContent = "save"
-        editForm.setAttribute("name", "editForm")
-        editInput.setAttribute("name", "editForm")
-        saveButton.addEventListener("submit", (event) => {
-            event.preventDefault;
-            itemText.textContent = editForm.input.value;
-            li.append(itemText);
+        updateForm.setAttribute("name", "editForm")        
+        editInput.setAttribute("name", "updatedInput")
+        saveButton.setAttribute("name", "editForm")
+        editInput.value = edit.previousElementSibling.textContent
+        edit.previousElementSibling.textContent = ""
+        updateForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            var updatedText = editForm.updatedInput.value
+            edit.previousElementSibling.textContent = updatedText
+            editForm.remove();
         })
-        edit.parentElement.append(editForm)
-        editForm.append(editInput)
-        editForm.append(saveButton)
+        edit.parentElement.prepend(updateForm)
+        updateForm.append(editInput)
+        updateForm.append(saveButton)
     });
     del.textContent = "X"
-    del.addEventListener("click", (event) => {
-        event.preventDefault;
+    del.addEventListener("click", () => {
         del.parentElement.remove();
     })
     ul.append(li)
@@ -43,20 +45,3 @@ addItem.addEventListener("submit", (event) => {
     li.append(edit)
     li.append(del)
 })
-
-// function save(event) => {
-//     event.preventDefault;
-//     itemText.textContent = editForm.value;
-//     li.append(itemText);
-// }
-// var removeItem = document.getElementsByClassName(".delete")
-// removeItem.addEventListener("click", () => {
-//     removeItem.parentElement.remove();
-// })
-// function edit() {
-//     var editForm = document.createElement("form")
-//     var editInput = document.createElement("input")
-//     var saveButton = document.createElement("button")
-//     saveButton.textContent = "save"
-//     var newValue = editInput.value
-// }
