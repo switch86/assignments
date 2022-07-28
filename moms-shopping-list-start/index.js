@@ -10,7 +10,11 @@ addItem.addEventListener("submit", (event) => {
     var li = document.createElement("li")
     var itemText = document.createElement("div")
     var edit = document.createElement("button")
-    var del = document.createElement("button")
+    var del = document.createElement("button")    
+    ul.append(li)
+    li.append(itemText)
+    li.append(edit)
+    li.append(del)
     itemText.textContent = newItem
     edit.textContent = "Edit"
     // event listener and function to add edit form 
@@ -18,32 +22,26 @@ addItem.addEventListener("submit", (event) => {
         event.preventDefault;
         var updateForm = document.createElement("form")
         var editInput = document.createElement("input")
-        var saveButton = document.createElement("button")
-        saveButton.textContent = "save"
-        updateForm.setAttribute("name", "editForm")        
-        editInput.setAttribute("name", "updatedInput")
-        saveButton.setAttribute("name", "editForm")
-        // keep the previously saved item as the default form input (user experience)
-        editInput.value = edit.previousElementSibling.textContent
-        edit.previousElementSibling.textContent = ""
-        // event listener to submit new input and delete the edit form
-        updateForm.addEventListener("submit", (event) => {
-            event.preventDefault();
-            var updatedText = editForm.updatedInput.value
-            edit.previousElementSibling.textContent = updatedText
-            editForm.remove();
-        })
+        var saveButton = document.createElement("button")        
         edit.parentElement.prepend(updateForm)
         updateForm.append(editInput)
         updateForm.append(saveButton)
+        saveButton.textContent = "save"
+        // keep the previously saved item as the default form input (user experience)
+        editInput.value = newItem
+        itemText.textContent = ""
+        // event listener to submit new input and delete the edit form
+        updateForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            var updatedText = editInput.value
+            console.log(updatedText)
+            itemText.textContent = updatedText
+            updateForm.remove();
+        })
     });
     // delete function
     del.textContent = "X"
     del.addEventListener("click", () => {
         del.parentElement.remove();
     })
-    ul.append(li)
-    li.append(itemText)
-    li.append(edit)
-    li.append(del)
 })
