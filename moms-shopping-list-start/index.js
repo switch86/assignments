@@ -11,10 +11,9 @@ addItem.addEventListener("submit", (event) => {
     var itemText = document.createElement("div")
     var edit = document.createElement("button")
     var del = document.createElement("button")
-    edit.setAttribute("class", "edit")
-    del.setAttribute("class", "delete")
     itemText.textContent = newItem
     edit.textContent = "Edit"
+    // event listener and function to add edit form 
     edit.addEventListener("click", (event) => {
         event.preventDefault;
         var updateForm = document.createElement("form")
@@ -24,8 +23,10 @@ addItem.addEventListener("submit", (event) => {
         updateForm.setAttribute("name", "editForm")        
         editInput.setAttribute("name", "updatedInput")
         saveButton.setAttribute("name", "editForm")
+        // keep the previously saved item as the default form input (user experience)
         editInput.value = edit.previousElementSibling.textContent
         edit.previousElementSibling.textContent = ""
+        // event listener to submit new input and delete the edit form
         updateForm.addEventListener("submit", (event) => {
             event.preventDefault();
             var updatedText = editForm.updatedInput.value
@@ -36,6 +37,7 @@ addItem.addEventListener("submit", (event) => {
         updateForm.append(editInput)
         updateForm.append(saveButton)
     });
+    // delete function
     del.textContent = "X"
     del.addEventListener("click", () => {
         del.parentElement.remove();

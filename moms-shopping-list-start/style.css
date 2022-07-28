@@ -4,14 +4,15 @@
 
 .main {
     border: 1px solid black;
-    width: 50%;
+    width: 60%;
     margin: auto;
+    background: #b0e3ae;
+
 }
 
 #add-item {
     border: 1px solid black;
 }
-
 .input {
     width: 100%;
     padding: 12px 20px;
@@ -28,15 +29,36 @@
 
 #list {
     flex-direction: column;
-    display: flex;
+    display: inline-block; 
+    width: 80%;   
+    margin: 0 0 0 1.5em;
+    background: white;
+    margin-bottom: 5px;
 }
 
 #list > li{
     list-style-type: none;
     margin: 10px auto;
+    
 }
 
 #list div {
     margin-bottom: 10px;
     text-align: center;
+    display: inline-block;    
+
+
+}
+body {
+    background: lightblue;
+}
+ul#list > li > div {
+    text-align: left;
+    display: inline-block;
+    padding: 3px;
+}
+ul#list > li > button {
+    display: flex;
+    float: right;
+    margin: 0 1em;
 }
