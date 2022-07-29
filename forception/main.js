@@ -22,6 +22,7 @@ function forception(people, alphabet){
     }
     return newArr
 }
+
 console.log(forception(people, alphabet))
 
 
