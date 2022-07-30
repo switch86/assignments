@@ -1,0 +1,48 @@
+* {
+    box-sizing:border-box;
+    display:inline-block;
+}
+section {
+    width:100%;
+    height: 10em;
+    font-size: 0px;
+}
+div {
+    height: 10em;
+    border: solid white 1px;
+    font-size: xx-large; 
+}
+.pink {
+    background: #F5C6D6;   
+}
+.magenta  {
+    background: #EE2E84;
+}
+.blue {
+    background: #85CFD8;
+}
+.green {
+    background: #8DC63F;
+}
+.orange {
+    background-color: #E76E34;
+}
+@media only screen and (min-width: 768px) {
+    .pink{
+        width: 100%;
+    }
+    .magenta, .orange {
+        width: 25%;
+    }
+    .blue {
+        width: 50%;
+    }
+    .green {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    div.pink, div.green, div.blue, div.magenta, div.orange, div.pink {
+        width: 100%;
+    }
+}
