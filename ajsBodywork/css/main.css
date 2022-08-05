@@ -1,0 +1,250 @@
+@media only screen and (max-width: 750px) {
+.image-bar {
+    width: 100%;
+}
+#pricing {
+    flex-direction: row;
+}
+#reiki-pricing, #massage-pricing {
+    margin: 1rem;
+    
+}
+#subscription img.plant-image {
+    display: none;
+}
+#subscription {
+    background:rgb(171, 126, 179)
+}
+#subscription div {
+    grid-column: 1/4;
+    width: 90%;
+    margin: 0px 10px;
+}
+#packages div {
+    margin: 50px 10px;
+    width: 90%;
+}
+}
+
+@media only screen and (min-width:751px) {
+#specialties ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#about-me {
+    display:grid;
+    grid-template-columns: 3fr 4fr;   
+}
+.headshot {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.image-bar {
+    height:100%;
+    width: 33%;
+}
+#pricing {
+    display: flex;    
+    align-content: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+#massage-price, #reiki-price {
+    width: 500px;
+    margin: 0px 75px;
+    
+}
+#subscription {
+    background: #fffffe;
+}    
+#packages div {
+    width: 50%;  
+}    
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-image: url("images/background.png");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: antiquewhite;
+    height: 400px;
+    padding: 20px 0px;
+}
+section {
+    width:100%;
+    background: #85668a;
+}
+
+#main div h1 {
+    color: #85668a;
+    font-size: 3rem;
+    text-shadow: 4px 1px rgba(133,102,138,.3);
+}
+#main div h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: slategray;
+}
+
+#head-shot {
+    width: 50%;
+    margin: 20px 0;
+    align-self:center;
+    border: 1px black solid;
+}
+#meet-angel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 5em 0;
+}
+#meet-angel h1 {
+    font-family: 'Playfair Display', serif;
+    color: slategray;
+    font-size: 2.5rem;
+    border-bottom: 2px slategray solid;
+    margin: 0 50px;
+}
+#meet-angel p {
+    font-family: 'Montserrat', sans-serif;
+    color: slategray;
+    font-weight: bolder;
+    font-size: 1rem;
+    padding: 0 30px;
+}
+#read-more {
+    background-color: rgba(176, 87, 49, 1)
+}
+#specialties {
+    background: #f2ece4;
+    height:fit-content;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    align-content: center;
+    justify-content: center;
+    color: rgb(69, 51, 72);
+    padding: 0px;
+}
+#specialties ul {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr); */
+    list-style:circle;
+    height: 50%;
+    padding: 0px;
+}
+#specialties ul li {
+    padding: 3rem 4rem 3rem 3rem;
+    list-style: none;
+    font-size: 1.75rem;
+}
+
+/* Covid */
+#covid {
+    background-image: url("images/background2.png");
+    color: white;
+    font-size: 2rem;;
+    padding:5% 15%;
+}
+#covid p {
+    font-size: 1.4rem;
+}
+
+/* Pricing Section Styles */
+#pricing > div > h1 {
+    border-bottom: #ffffff solid 1px;
+    padding-bottom: 5px;
+}
+#massage-price, #reiki-price {
+    color: white;
+    font-size: 1.5em;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 50px;
+    
+}
+#massage-price {
+    background: #353154;
+}
+#reiki-price {
+    background: #b05731;
+}
+#pricing ul li {
+    list-style: outside;
+    padding-inline-start: 30px;
+    text-align: left;
+    padding: 10px 20px;
+    /* border-bottom: #ffffff 1px solid;
+    margin: 0px 100px 5px 20px; */
+}
+
+/* Subscription Section Styles  */
+#subscription {
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center; 
+    padding: 50px 0px 20px 0px;
+}
+#subscription div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0px 40px;
+    font-family: 'Montserrat', sans-serif;
+    color:rgb(69, 51, 72);
+    background-color: #fffffe;
+    text-align: center;
+}
+#subscription div span {
+    margin: 0px 0px 20px 0px;
+    font-size: 1.5em;
+}
+#subscription div h1, #packages div h1 {
+    color: #b05731;
+    font-size: 2.5em;
+    border-bottom: #b05731 solid 2px;
+    padding-bottom: 5px;
+}
+#subscription button {
+    width: 150px;
+    align-self: center;
+}
+#subscription div p {
+    margin-top: 50px;
+    font-size: 1em;
+    font-family:'Playfair Display', serif;
+}
+
+/* Packages section Styles*/
+#packages {
+    background-image: url("images/background3.png");
+    display: flex;
+    justify-content:center;
+    align-content: center;
+
+}
+#packages > div {
+    background: white;
+    font-family: 'Montserrat', sans-serif;  
+    margin: 50px 0px;
+    padding: 10px 40px;
+}
+#packages div h2 {
+    margin: 20px 0px 0px 0px;
+}
+#packages div span {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#packages div p {
+    font-family: 'Playfair Display', serif;
+}

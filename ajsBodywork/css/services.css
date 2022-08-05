@@ -1,0 +1,46 @@
+@media only screen and (max-width:750px) {
+
+}
+@media only screen and (min-width: 751px) {
+#services {    
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px;
+}}
+main * {
+    font-family: 'Playfair Display', serif;
+}
+main > h1 {
+    text-decoration: underline;
+    /* margin: 0px 200px 10px 200px;
+    padding: 50px 0px;
+    border-bottom: grey solid 1px; */
+}
+#services {
+    background: #fffffe;
+    color: #353154;
+    text-decoration: none;
+}
+div.service img {
+    width: 225px;
+    height: 150px;
+}
+div.service img:hover {
+    border: #5c5c5f 2px solid;
+}
+div.service {
+    padding: 4rem;
+}
+div.service p {
+    padding: 0px 4rem;
+}
+div.service a {
+    color: #353154;
+    text-decoration: none;
+}
+div.service span {
+    text-decoration: underline;
+}
+div.service span:hover {
+    color: #91738b; 
+}
