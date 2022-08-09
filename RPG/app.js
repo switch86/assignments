@@ -31,10 +31,10 @@ let level = readline.question("Level Select. Do you want to start as a trans you
         opponent = 7;
     } else if (level === "b") {
         patience = 40;
-        opponent = 15;
+        opponent = 12;
     } else if (level ==="c") {
         patience = 30;
-        opponent = 20;
+        opponent = 15;
     } 
 
 function walk() {
@@ -125,12 +125,12 @@ function Attack() {
     random = Math.floor(Math.random() * 10)
     points = Math.floor(Math.random() * 5) + 1
     if (random % 2 === 0) {
-        console.log("The transphobe is enraged and and argues back ferociusly. Your Resistance Quotient decreases by " + (points + 2) + " points.");
-        energy = energy - (points + 2);
+        console.log("The transphobe is enraged and argues back ferociusly. Your Resistance Quotient decreases by " + points + " points.");
+        energy = energy - points;
         }      
     else {
-        console.log("You've made a good point. Your opponents' score drops by " + points + " points.")
-        transphobeRQ = transphobeRQ - points
+        console.log("You've made a good point. Your opponents' score drops by " + (points + 2) + " points.")
+        transphobeRQ = transphobeRQ - (points + 2)
     } 
 }
 
@@ -145,10 +145,6 @@ function battleWon() {
     console.log("You have emerged victorious!!! Relish in the spoils. \n\nYour Resistance Quotient increases by 10 points. \n\nYou are awarded with " + awards[i] + ". \n\nWhat an honor!!!")
     patience = patience - (penalty - energy)
     patience = patience + 10
-    // console.log(awards)
-    // console.log(player.awards)
-    // console.log(transphobes)
-    // console.log(player.defeated)
 }
 
 function friendTrust() {
@@ -213,7 +209,7 @@ while (patience > 0) {
         console.log("\nYour final score was " + patience + " points. \n\nYou are PRO TRANS!")
         return null;
     } 
-    if (answer === "q" || player.awards.length > 10) {
+    if (answer === "q") {
         return null
     } else if (answer === "i") {
         console.log("Hi, " + player.name + "! \n\nWelcome to your inventory. So far you've helped these people understand the errors of their ways: ")
