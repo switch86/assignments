@@ -13,14 +13,17 @@
     <h1>Your Flight is Confirmed!</h1>
     <h2>Please provide the following information to reserve an in flight meal.</h2>
     <form name="mealForm" id="mealForm">
+        <div class="one">
         <input type="text" placeholder="First Name" label="First Name" name="firstName">
         <input type="text" placeholder="Last Name" label="Last Name" name="lastName">
         <input type="number" placeholder="Age" label="Age" name="age">
-        <label for="sex">Sex:</label>
+        </div >
+        <div class="two">
+        <label for="sex" class="sex">Sex:</label>
             <select name="sex" id="sex">
-                <option value="Female" name="sex"></option>
-                <option value="Male" name="sex"></option>
-                <option value="Other/Non-Binary" name="sex"></option>
+                <option value="Female" name="sex">Female</option>
+                <option value="Male" name="sex">Male</option>
+                <option value="Other/Non-Binary" name="sex">Other/Non-Binary</option>
             </select>
         <label for="destination">Destination:</label>
             <select name="destination" id="destination">
@@ -30,12 +33,16 @@
                 <option value="North America" name="destination">North America</option>
                 <option value="South America" name="destination">South America</option>
             </select>
-        <label for="diet">Dietary Restrictions:</label>
-            <select name="diet" id="diet">
-                <option value="no restrictions" name="diet">No Restrictions</option>
-                <option value="vegetarian" name="diet">Vegetarian</option>
-                <option value="Vegan" name="diet">Vegan</option>
-        <input type="submit">
+        </div>
+        <div class="three">
+        <label for="diet" class="diet">Select All Dietary Restrictions:</label>
+                <label>No Restrictions</label><input type="checkbox" value="No Restrictions" name="diet">
+                <label>Vegetarian</label><input type="checkbox" value="Vegetarian" name="diet">
+                <label>Vegan</label><input type="checkbox" value="Vegan" name="diet">
+                <label>Kosher</label><input type="checkbox" value="Kosher" name="diet">
+                <label>Gluten Free</label><input type="checkbox" value="Gluten Free" name="diet">
+                <input type="submit" class="submit">
+    </div>  
     </form>
   </main>
 <script src="app.js"></script>

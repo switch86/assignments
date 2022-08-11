@@ -4,15 +4,19 @@ let passenger = {
     lastName: "",
     sex: "",
     destination: "",
-    meal: "",
+    meal: [],
 }
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    passenger.firstName = form.firstName.value
-    passenger.lastName = form.lastname.value
+    passenger.firstName = document.mealForm.firstName.value
+    passenger.lastName = document.mealForm.lastName.value
     passenger.sex = form.sex.value;
     passenger.destination = form.destination.value;
-    passenger.meal = form.diet.value;
-    console.log(passenger)
+    for (let i = 0; i < form.diet.length; i++) {
+        if (form.diet[i].checked) {
+            passenger.meal.push(form.diet[i].value)
+        }
+    }
+    alert(`First Name: ${passenger.firstName}\nLast Name: ${passenger.lastName}\nAge: ${passenger.age}\nSex: ${passenger.sex}\nDestination: ${passenger.destination}\nDietary Restrictions: ${passenger.meal}`)
 })
 
