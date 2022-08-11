@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header></header>
+  <main>
+    <h1>Your Flight is Confirmed!</h1>
+    <h2>Please provide the following information to reserve an in flight meal.</h2>
+    <form name="mealForm" id="mealForm">
+        <input type="text" placeholder="First Name" label="First Name" name="firstName">
+        <input type="text" placeholder="Last Name" label="Last Name" name="lastName">
+        <input type="number" placeholder="Age" label="Age" name="age">
+        <label for="sex">Sex:</label>
+            <select name="sex" id="sex">
+                <option value="Female" name="sex"></option>
+                <option value="Male" name="sex"></option>
+                <option value="Other/Non-Binary" name="sex"></option>
+            </select>
+        <label for="destination">Destination:</label>
+            <select name="destination" id="destination">
+                <option value="Europe" name="destination">Europe</option>
+                <option value="Asia" name="destination">Asia</option>
+                <option value="Africa" name="destination">Africa</option>
+                <option value="North America" name="destination">North America</option>
+                <option value="South America" name="destination">South America</option>
+            </select>
+        <label for="diet">Dietary Restrictions:</label>
+            <select name="diet" id="diet">
+                <option value="no restrictions" name="diet">No Restrictions</option>
+                <option value="vegetarian" name="diet">Vegetarian</option>
+                <option value="Vegan" name="diet">Vegan</option>
+        <input type="submit">
+    </form>
+  </main>
+<script src="app.js"></script>
+</body>
+</html>

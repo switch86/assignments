@@ -1,9 +1,15 @@
 const readline = require("readline-sync");
 let transphobes = ["a cashier", "your parent", "a stranger in the restroom", "someone on social media", "a co-worker", "a childhood friend", "a stranger at a bar", "a stranger at the grocery store", "a classmate", "your cousin", "your sibling"]
-const transphobeComments = ["uses the wrong pronoun", "uses your dead name", "makes fun of your appearance", "invalidates your gender", "says something transphobic about a celebrity", "makes a joke about you being in drag", "calls you a slur", "starts talking loudly about how gender is just basic biology", "calls women 'females'", "jokes about how gay men think vagina's are gross", "says you'll always be *dead name* to them"]
-let awards = ["Marsha P. Johnson's stilleto pump", "A wink from Laverne Cox", "Lou Sullivan's teenage journal", "Elliot Page's oversized suit", "A big hug from Miss Major Griffen-Gracy", "Billy Tipton's hit jazz single", "Chaz Bono's beard trimmings", "Cece McDonald's handbag", "Patricio 'Cacahuate' Manuel's boxing gloves", "A personal training session with Aidan Dowling", "Angelica Ross' laptop"]
+const transphobeComments = ["uses the wrong pronoun", "uses your dead name", "makes fun of your appearance", "says something transphobic about a celebrity", "calls you a slur", "explains how gender is just basic biology", "calls women 'females'", "casually asks about your genitals", "says they just aren't personally attracted to trans people", "says you'll always be *dead name* to them"]
+let awards = ["Marsha P. Johnson's stilleto pump", "A wink from Laverne Cox", "Lou Sullivan's teenage journal", "Elliot Page's oversized suit", "A big hug from Miss Major Griffen-Gracy", "Billy Tipton's hit jazz single", "Chaz Bono's beard trimmings", "Cece McDonald's handbag", "Patricio 'Cacahuate' Manuel's boxing gloves", "Indya Moore's gold earring", "Angelica Ross' laptop", "Laura Jane Grace's electric guitar", "Nolan Hanson's boxing glove", "a dedicated performance from Peppermint", "Janet Mock's latest article", "a spotlight on 'I am Jazz' with Jazz Jennings", "Rachel Levine's "]
 const compliments = ["A stranger tells you they like your shoes", "Your parent sends you a birthday card that affirms your gender", "A cute person gives you their phone number", "You end up at a friends birthday party and have a great time", "A colleague nominates you for a prestigious award", "Someone you look up to compliments your work", "You try on a new outfit and feel major gender euphoria", "You go the whole day and nobody misgenders you", "A friend calls to invite you to a fun event", "You have a really peaceful walk in the park", "You try a new activity that always felt off-limits before"]
+// let transFacts = { 
+//     facts: ["Trans people are twice as likely to be unemployed compared with the overall population. Looking at only black trans people, that rate doubles again.", "Trans people are four times more likely than cisgender people to experience violent physical or sexual assault", ], 
+//     sources: [UCLA School of Law - Williams Institute https://williamsinstitute.law.ucla.edu/press/ncvs-trans-press-release/ ]
 
+// }
+
+let depression = 0
 let answer
 let patience
 let transphobe
@@ -18,9 +24,13 @@ let player = {
     defeated: [],
     rq: patience, 
 }
+// **Disclaimer** The reality of the world is that these are the less harmful forms of transphobia and trans hate in the world, but they show the truth of a mindset that emboldens and enables the more insidious versions. 
+
+// \n\nThe author is approaching this as a white person who presents outwardly as a man. The reality of transphobia in the world is far more brutal, especially for trans women and even more so for trans women of color.
+
 
 // Greeting
-console.log("Welcome to the trans experience! \n\nImagine yourself existing in the world as a trans person. Life isn't easy, but there are good things too. You'll encounter all kinds of transphobic and transfriendly people in this world and will have to decide how to interact with them. \n\nYou can think of your Resistance Quotient (RQ) as your overall health - if you run all the way out the game is over. If you win ten awards by overcoming transphobes, you'll be declared pro trans. Try again and again to see how high you can score! \n\nType (q) at any time to quit the game, or (i) to check your inventory.")
+console.log("Welcome to the trans experience! \n\nImagine yourself existing in the world as a trans person. Life isn't easy, but there are good things too. You'll encounter all kinds of transphobic microaggressions and friends/community members in this world and will have to decide how to interact with them.  \n\nYou can think of your Resistance Quotient (RQ) as your overall health - if you run all the way out the game is over. If you win ten awards by overcoming transphobes, you'll be declared pro trans. Try again and again to see how high you can score! \n\nType (q) at any time to quit the game, or (i) to check your inventory.")
 
 player.name = readline.question("To get started, what is your name?")
 console.log("Great! Thanks for playing, " + player.name + "!")

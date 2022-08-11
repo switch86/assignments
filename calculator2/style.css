@@ -1,0 +1,25 @@
+body {
+    background: lightblue;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+div {
+    padding-top: 30px;
+}
+h1 {
+    text-align: center;
+}
+section {
+    text-align: right;
+    margin: 10px;
+}
+#answer {
+    background: pink;
+    border: gray 4px solid;
+    margin: 30px 15%;
+}
+#answer h1 {
+    text-decoration: underline;
+}
