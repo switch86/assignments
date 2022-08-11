@@ -1,14 +1,15 @@
 const readline = require("readline-sync");
 let transphobes = ["a cashier", "your parent", "a stranger in the restroom", "someone on social media", "a co-worker", "a childhood friend", "a stranger at a bar", "a stranger at the grocery store", "a classmate", "your cousin", "your sibling"]
-const transphobeComments = ["uses the wrong pronoun", "uses your dead name", "makes fun of your appearance", "says something transphobic about a celebrity", "calls you a slur", "explains how gender is just basic biology", "calls women 'females'", "casually asks about your genitals", "says they just aren't personally attracted to trans people", "says you'll always be *dead name* to them"]
-let awards = ["Marsha P. Johnson's stilleto pump", "A wink from Laverne Cox", "Lou Sullivan's teenage journal", "Elliot Page's oversized suit", "A big hug from Miss Major Griffen-Gracy", "Billy Tipton's hit jazz single", "Chaz Bono's beard trimmings", "Cece McDonald's handbag", "Patricio 'Cacahuate' Manuel's boxing gloves", "Indya Moore's gold earring", "Angelica Ross' laptop", "Laura Jane Grace's electric guitar", "Nolan Hanson's boxing glove", "a dedicated performance from Peppermint", "Janet Mock's latest article", "a spotlight on 'I am Jazz' with Jazz Jennings", "Rachel Levine's "]
+let transphobeComments = ["uses the wrong pronoun", "uses your dead name", "makes fun of your appearance", "says something transphobic about a celebrity", "calls you a slur", "explains how gender is just basic biology", "calls women 'females'", "casually asks about your genitals", "says they just aren't personally attracted to trans people", "says you'll always be *dead name* to them", "talks/asks about your 'real name'"]
+let awards = ["Marsha P. Johnson's rhinestone covered stilleto", "A wink from Laverne Cox", "Lou Sullivan's teenage journal", "Elliot Page's oversized suit", "A big hug from Miss Major Griffen-Gracy", "Billy Tipton's hit jazz single", "Chaz Bono's beard trimmings", "Cece McDonald's handbag", "Patricio 'Cacahuate' Manuel's boxing gloves", "Indya Moore's gold earring", "Angelica Ross' laptop", "Laura Jane Grace's electric guitar", "Nolan Hanson's boxing glove", "a dedicated performance from Peppermint", "Janet Mock's latest article", "a spotlight on 'I am Jazz' with Jazz Jennings"]
 const compliments = ["A stranger tells you they like your shoes", "Your parent sends you a birthday card that affirms your gender", "A cute person gives you their phone number", "You end up at a friends birthday party and have a great time", "A colleague nominates you for a prestigious award", "Someone you look up to compliments your work", "You try on a new outfit and feel major gender euphoria", "You go the whole day and nobody misgenders you", "A friend calls to invite you to a fun event", "You have a really peaceful walk in the park", "You try a new activity that always felt off-limits before"]
+
 // let transFacts = { 
 //     facts: ["Trans people are twice as likely to be unemployed compared with the overall population. Looking at only black trans people, that rate doubles again.", "Trans people are four times more likely than cisgender people to experience violent physical or sexual assault", ], 
 //     sources: [UCLA School of Law - Williams Institute https://williamsinstitute.law.ucla.edu/press/ncvs-trans-press-release/ ]
 
 // }
-
+let comment
 let depression = 0
 let answer
 let patience
@@ -24,17 +25,14 @@ let player = {
     defeated: [],
     rq: patience, 
 }
-// **Disclaimer** The reality of the world is that these are the less harmful forms of transphobia and trans hate in the world, but they show the truth of a mindset that emboldens and enables the more insidious versions. 
-
-// \n\nThe author is approaching this as a white person who presents outwardly as a man. The reality of transphobia in the world is far more brutal, especially for trans women and even more so for trans women of color.
-
+// **Disclaimer** This game is meant to show the kinds of microaggressions that are common that emboldens and enables the more insidious versions. The reality of transphobia in the world is far more brutal, especially for trans women and even more so for trans women of color. //
 
 // Greeting
 console.log("Welcome to the trans experience! \n\nImagine yourself existing in the world as a trans person. Life isn't easy, but there are good things too. You'll encounter all kinds of transphobic microaggressions and friends/community members in this world and will have to decide how to interact with them.  \n\nYou can think of your Resistance Quotient (RQ) as your overall health - if you run all the way out the game is over. If you win ten awards by overcoming transphobes, you'll be declared pro trans. Try again and again to see how high you can score! \n\nType (q) at any time to quit the game, or (i) to check your inventory.")
 
 player.name = readline.question("To get started, what is your name?")
 console.log("Great! Thanks for playing, " + player.name + "!")
-let level = readline.question("Level Select. Do you want to start as a trans youth (a), a trans adult (b), or a trans elder (c)?")
+let level = readline.question("Level Select. Do you want to play as a trans youth (a), a trans adult (b), or a trans elder (c)?")
 
     if (level === "a") {
         patience = 50;
@@ -66,12 +64,14 @@ function takeAChance() {
     random = Math.floor(Math.random() * transphobes.length)
     if (random % 2 === 0) {
         transphobe = transphobes[random]
-
-        console.log("You encounter " + transphobe + ", who " + transphobeComments[random]) 
+        random = Math.floor(Math.random() * transphobeComments.length)
+        comment = transphobeComments[random]
+        console.log("You encounter " + transphobe + ", who " + comment) 
         encounter()
     } else if (random % 3 === 0) {
         friendTrust()
     } else {
+        random = Math.floor(Math.random() * compliments.length)
         console.log(compliments[random] + ". Your Resistance Quotient increases by one point");
         patience++
     }
@@ -86,7 +86,7 @@ function encounter() {
     }
 }
 
-// If you try to ignore a transphobe you have encountered, there is a chance of whether this will impact you positively or negatively. The amount of damage/boost is also random with roughly 30% chance of having no impact at all. 
+// If you try to ignore a transphobe you have encountered, there is a chance of whether this will impact you positively or negatively and the amount will be random 1-11
 function keepWalking()      { 
     random = Math.floor(Math.random() * 10);
     points = random + 1
@@ -99,7 +99,7 @@ function keepWalking()      {
             patience = patience + points; 
         }
 } 
-
+// player can select how much RQ they want to risk in the encounter. this does not impact the opponents RQ
 function chooseEnergy() {
     energy = patience + 1
         do {energy = readline.question("You have a total Resistance Quotient of " + patience + " points. How much are you willing to risk in this encounter?")}
@@ -108,7 +108,7 @@ function chooseEnergy() {
         console.log(penalty)
     battle();
 }
-
+//during the battle the player can choose with each attack whether they want to attack or run away. If the player runs away it runs the same function (keepWalking) as ignoring them to begin with, otherwise it is the attack function. Opponents strength is based on the initial level selection saved in the opponent variable. 
 function battle() {
     transphobeRQ = (Math.floor(Math.random() * opponent) + 1)
     let fight = true    
@@ -131,6 +131,7 @@ function battle() {
     }
 }
 
+// the player has a 50% - 50% chance of giving or recieving damage. The result is damage is weighted to recieve
 function Attack() {
     random = Math.floor(Math.random() * 10)
     points = Math.floor(Math.random() * 5) + 1
@@ -143,20 +144,22 @@ function Attack() {
         transphobeRQ = transphobeRQ - (points + 2)
     } 
 }
-
+// When the transphobe loses all RQ first, the battlewon function runs. This filters the arrays into themselves so that opponents and awards will be randomized but not repeated. They are then pushed to the awards and defeated arrays stored in the player object
 function battleWon() {        
     let i = Math.floor(Math.random() * transphobes.length)
     let j = Math.floor(Math.random() * awards.length)
     player.defeated.push(transphobe)
     transphobes = transphobes.filter(input => input != transphobe)
-    award = awards[i]
+    award = awards[j]
     player.awards.push(award)
     awards = awards.filter(input => input != award)
-    console.log("You have emerged victorious!!! Relish in the spoils. \n\nYour Resistance Quotient increases by 10 points. \n\nYou are awarded with " + awards[i] + ". \n\nWhat an honor!!!")
+    transphobeComments = transphobeComments.filter(input => input != comment)
+    console.log("You have emerged victorious!!! Relish in the spoils. \n\nYour Resistance Quotient increases by 10 points. \n\nYou are awarded with " + award + ". \n\nWhat an honor!!!")
     patience = patience - (penalty - energy)
     patience = patience + 10
 }
 
+//when running into a friend on initial walk the player will select to confide or make small talk
 function friendTrust() {
     let answer = readline.question("You've run into a friend! Do you (a) confide in them or (b) just make small talk")
     if (answer === "a") {
@@ -166,14 +169,14 @@ function friendTrust() {
     } 
 }
 
+//if the player chooses small talkthis will always increase by either 1 or 3. If they do this more than 5 times it will start to lower the RQ unless they choose confide and trust is reset to 0. 
 function SmallTalk() {
     trust++
     let random = Math.floor(Math.random() * 10)
     if (trust > 5) {
         console.log("You know eventually you'll need to confide in your friend to build trust. Your RQ drops by one point")
         patience--
-    }
-    if (random % 2 === 0) {
+    } else if (random % 2 === 0) {
         console.log("It's nice seeing your friend. Hopefully next time you'll feel comfortable confiding in them. Your RQ increases by one point.")
         patience++
     } else {
@@ -181,6 +184,8 @@ function SmallTalk() {
         patience = patience + 3
     }
 }
+
+//if you confide, there is a 50% 50% chance that your friend needs support from you. A random amount of points is either taken or granted depending on the emotional availability of your friend. 
 function friend() {
     trust = 0
     random = Math.floor(Math.random() * 6)
@@ -193,21 +198,21 @@ function friend() {
         patience = patience - points
     }
 }
-
+// if the player stays home it will initial increase their RQ 1 point. After 3 times it will begin to severely drop their RQ unless they reset depression by choosing walk. 
 function hermit() {
     depression++
     if (depression <= 3) { 
         console.log("You feel re-energized after getting some time alone. Your Resistance Quotient increases one point.")
-        patience = patience + 1
+        patience++
     } else {
         console.log("You've been home alone too long. Your resistance quotience decreases by five points.")
         patience = patience - 5
     }
 }
 
-
+// The game runs while the player has RQ remaining. If they get 11 awards they will be declared a winner. The array of their awards and the array of opponents will be printed. 
 while (patience > 0) {
-    if (player.awards.length >= 11) {
+    if (player.awards.length >= 10) {
         console.log("Congratulations! You are a winner!! \n\nYou have increased your social support network and are confidently living your best life!  \n\nThroughout your transition you gathered the following awards: ")
         for (let i = 0; i < player.awards.length; i++) {
             console.log(player.awards[i])
@@ -219,6 +224,7 @@ while (patience > 0) {
         console.log("\nYour final score was " + patience + " points. \n\nYou are PRO TRANS!")
         return null;
     } 
+// All return values except for the initial Name are stored as answer, which is a global variable. If that ever comes back as i, the inventory prints. If it ever comes back as q, it returns null to close the program. 
     if (answer === "q") {
         return null
     } else if (answer === "i") {
