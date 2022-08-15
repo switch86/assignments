@@ -1,0 +1,131 @@
+body {
+    font-family: 'Silkscreen', cursive;
+}
+header {
+    background-image: url("horror.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto-fit, 200px);
+    grid-row: 1/4;
+    font-family: 'Silkscreen', cursive;
+    border-top: yellow 10px solid;
+    border-left: yellow 10px solid;
+    border-right: yellow 10px solid;
+    padding: 10px 10px 0 0 ;
+}
+header img {
+    width: 200px;
+}
+header > h1 {
+    font-size: 4em;
+    color: yellow;
+    text-shadow: 5px 1px rgb(148, 148, 0);
+    text-align: center;
+    grid-column: 1 / 5;
+}
+.peach {
+    grid-column: 5/6;
+    padding-bottom: 50px;
+    grid-rows: 2/3;
+}
+.mario {
+    grid-column: 4 /5;
+    grid-row: 2/3;
+    padding-bottom: 50px;
+}
+main {
+    background: rgb(0, 0, 33);
+    border: yellow 10px solid;
+    color:yellow;
+}
+main img {
+    width: 150px;
+}
+main img.goomba: {
+    width: 100px;
+}
+#kills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
+#kills div {
+    border-bottom: 10px yellow solid;
+    border-right: 10px yellow solid;
+    width: 33%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Silkscreen', cursive;
+}
+#kills div.cheep {
+    border-right: none;
+}
+#kills input {
+    margin-left: 40px;
+}
+#submit {
+    margin: 10px 40%;
+    padding: 10px;
+    width: 20%;
+
+}
+main > section.totals {
+    border-top: yellow 10px solid;
+    border-bottom: yellow 10px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0 0 20rem;
+}
+#killsTotal, #coinsTotal { 
+    grid-column: 1/2;
+}
+#goombaTotal, #bobombTotal, #cheepTotal { 
+    grid-column: 2/3;
+}
+#goombaTotal {
+    grid-row: 1/2;
+}
+
+main section.hitList{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+} 
+div.hitList {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5em;
+}
+.hitList h1 {
+    text-align: center;
+    text-decoration: underline; 
+}
+/* section.two {
+    justify-content: space-around;
+    padding: 50px;
+} */
+/* #submit {width: 100%;} */
+/* .goomba {
+    grid-column: 1/2;
+    align-self: center;
+} */
+/* #goomba {
+    grid-column: 2/3;
+} */
+/* #bobomb {
+    grid-column: 3/4;
+} */
+/* #submit {
+    grid-column: 5 / 6;
+    grid-row: 3 / 4;
+} */
+/* #kills input{
+    grid-row:  2/3;
+} */
+

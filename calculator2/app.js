@@ -1,6 +1,7 @@
 const multiply = document.multiplication
 const add = document.addition
 const subtract = document.subtraction
+const divide = document.division
 let num1 = 0 
 let num2 = 0
 let num3 = 0
@@ -39,6 +40,16 @@ multiply.addEventListener("submit", (event) => {
     multiply.num2.value = null
     num3 = num1 * num2
     answer = num1 + " x " + num2 + " = " + num3
+    insertAnswer(answer);
+})
+divide.addEventListener("submit", (event) => {
+    event.preventDefault();
+    num1 = divide.num1.valueAsNumber
+    num2 = divide.num2.valueAsNumber
+    divide.num1.value = null
+    divide.num2.value = null
+    num3 = num1 / num2
+    answer = num1 + " / " + num2 + " = " + num3
     insertAnswer(answer);
 })
 

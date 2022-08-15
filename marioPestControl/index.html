@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Pest Control</title>
+</head>
+<body>
+   <header>
+    <h1>Mario Pest Control</h1>
+    <img src="mario.png" alt="mario" class="mario">
+    <img src="peach.png" alt="princess peach" class="peach">
+   </header>
+   <main>
+        <form name="form" >
+            <section id="kills">
+            <div>
+            <label for="goomba"><h1>Goomba</h1><h2>5 coins</h2><img src="Goomba.png" alt="goomba" class="goomba"></label>
+            <input type="number" min="0" name="goomba" id="goomba">
+            </div>
+            <div>
+            <label for="bobomb"><h1>Bob-omb</h1><h2>7 coins</h2><img src="bobomb.png" alt="bob-omb" class="bobomb"></label>
+            <input type="number" min="0" name="bobomb" id="bobomb">
+            </div>
+            <div class="cheep">
+            <label for="cheep"><h1>Cheep-Cheep</h1><h2>11 coins</h2><img src="cheep.png" alt="cheep-cheep" class="cheep" ></label>
+            <input type="number" min="0" name="cheep" id="cheep">
+            </div>
+            </section> 
+            <input type="submit" id="submit">
+        </form>
+        <section class="totals">
+            <span id="coinsTotal">Total Coins: </span>
+            <span id="killsTotal">Total Kills:</span>
+            <span id="goombaTotal">Total Goomba: </span>
+            <span id="bobombTotal">Total Bobomb:</span>
+            <span id="cheepTotal">Total Cheep-Cheep: </span>
+        </section>
+        <div class="hitList">
+            <section class="hitList" id="hitList">
+                <h1 >Hit List</h1>
+            </section>
+            <section class=hitList id="cumulativeTotal">
+                <h1>Cumulative Total</h1>
+            </section>
+        </div>
+   </main>
+   <footer></footer>
+    <script src="app.js"></script>
+</body>
+</html>
