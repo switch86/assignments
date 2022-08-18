@@ -1,0 +1,62 @@
+body {
+    background-color: black
+}
+body > div {
+    box-sizing: border-box;
+    background: grey;
+    width: 200px;
+    height: 200px;
+    margin: 1%;
+    border: 2px black solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+#one {
+    transition: 2s linear;
+}
+#one:hover {
+    background-color: aqua;
+}
+#two {
+    transition: width, height, 2s linear;
+}
+#two:hover {
+    background-image: url("two.png");
+    width: 750px;
+    height: 562px;
+    border-radius: 300px;        
+}
+#three {
+    transition: border-radius, background-color, 1s linear;
+}
+#three:hover {
+    border-radius: 100px;
+    background-color: black;
+    
+}
+#four {
+    transition: ease-in 1s;
+}
+#four:hover {
+    box-shadow: 3px 30px blueviolet;
+    border-radius: 2em;
+}
+#five {
+    transition: 10s;
+}
+#five:hover {
+    background: rgba(128, 128, 128, 0);
+    border: 2px white solid; 
+}
+#six {
+    transition: 10s;
+}
+#six:hover {
+    border-radius: 100px;
+    width: 5px;
+    height: 5px;
+    
+}
