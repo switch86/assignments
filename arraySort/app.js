@@ -45,4 +45,3 @@ function lengthSort(arr) {
   //  { name: 'Unlucky Swami', age: 77 },
   //  { name: 'Arrogant Ambassador', age: 100 } ]
   
-  

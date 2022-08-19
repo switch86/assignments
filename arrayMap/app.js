@@ -1,13 +1,13 @@
 
 // 1.  Make an array of numbers that are doubles of the first array
-
+let array = [2, 5, 100]
 function doubleNumbers(arr){
     arr2 = arr.map(num => num * 2)
     return arr2
   }
   
-  console.log(doubleNumbers([2, 5, 100])); // [4, 10, 200]
-  
+  console.log(doubleNumbers(array)); // [4, 10, 200]
+  console.log(array)
 // 2. Take an array of numbers and make them strings
 
 

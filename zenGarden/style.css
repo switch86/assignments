@@ -1,0 +1,195 @@
+body {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 250px;
+    background-image: url("huntington.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 5px 0 0 0;
+}
+#header1 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 100px;
+    align-content: center;
+    text-align: left;
+    background: rgba(18, 19, 18, 0.162);
+}
+#header1 h1 {
+    color: white;
+    grid-column: 2/3;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+    margin: 50px 0 0 0;
+}
+#header1 h2 {
+    grid-column: 2/3;
+    color: rgb(158,184,179);
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    margin-top: 0;
+}
+#header1 h2 em {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+#header2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+#header2 button{
+    color: rgb(158,184,179);
+    border: none;
+    background: rgba(82, 86, 82, 0.438);
+    padding: 20px 10% 20px 10%;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    border-right: 1px rgba(18, 19, 18, 0.527) solid;
+}
+#main, #req {
+    background: white;
+    color: rgb(37, 59, 59);
+}
+#participation {
+    background: rgba(219, 249, 243, 0.5);
+    color: rgb(37, 59, 59);
+}
+#main p, #participation p, #req p {
+    font-family: 'Libre Baskerville', serif;
+    font-style: normal;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+#main a, #participation a, #req a {
+    text-decoration: underline;
+}
+section#main > h1, section#participation > h1, section#req > h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 200;
+}
+#layouts, #spacer {
+    background: rgb(229,237,232);
+    padding: 10%;
+}
+#nav {
+    background: rgba(187, 211, 206, 0.4);
+    padding: 10%;
+}
+#layouts ul li, #nav ul li {
+    list-style: none;
+    font-family: 'Libre Baskerville', serif;
+    border-bottom: 2px rgb(158,184,179) solid;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-items: center;
+    padding: 20px 0;
+}
+#layouts ul li h1, #nav ul li {
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(106, 124, 121);
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+}
+#nav nav ul li {
+    border-bottom: 1px rgb(35, 53, 53) solid;
+    color: rgb(35, 53, 53);
+}
+#layouts em, #nav em {
+    color: rgb(168, 176, 171);
+}
+
+#footer {
+    grid-column: 1/3;
+    text-align: center;
+    background-color:rgba(106, 124, 121, .4);
+    color:rgb(208, 208, 208);
+    padding: 100px 20%;
+}
+#footer em {
+    color:rgb(178, 178, 178)
+}
+#social {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 20%;
+    text-align: center;
+    grid-column: 1/3;
+    background:rgb(37, 59, 59);
+    color: rgb(168, 176, 171);
+    font-size: 10em;
+    font-family: "Social Reg", Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 750px) {
+    #header1, #main, #participation, #req {
+        grid-column: 1 / 3;
+    }
+    #main, #participation, #req {
+        padding: 10px 30px;
+    }
+    #swirl, #spacer {
+        display:none;
+    }
+    #header1 h1, #header1 h2, #header2 {
+        grid-column: 1/3;
+        text-align: center;
+    }   
+    #header1 h2 {
+        font-size: medium;
+    }
+    #layouts {
+        grid-row: 8/10;
+        grid-column: 1/3;
+    }
+    #nav {
+        grid-row: 10/11;
+        grid-column: 1/3;
+    }
+    #footer {
+        padding: 20px;
+    }
+    #layouts ul, #nav ul {
+        display: grid;
+        grid-template-columns: 3fr 2fr;        
+        padding: 0 10px 0 10px;
+        margin: 0;
+    }
+    #header2 button {
+        width: 100%;
+        background: rgba(18, 19, 18, 0.319);
+    }
+    #social {
+        font-size: 3em;
+    }
+}
+@media only screen and (min-width: 751px) {
+#swirl {
+    grid-column: 1/2;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 30px 0 0 40%;
+    width: 100px;
+}    
+#header2, #header2 button {
+    background:rgba(18, 19, 18, 0.319);
+}
+section#main, section#participation, section#req {
+    padding: 20px 10% 0 20%;
+}
+} 
+
+@font-face {
+    font-family: "Social Reg";
+    src: url('Socialico-Regular.eot');
+    src: url('Socialico-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Socialico-Regular.woff2') format('woff2'), 
+    url('Socialico-Regular.woff') format('woff'),
+    url('Socialico-Regular.ttf') format('truetype');
+   }
