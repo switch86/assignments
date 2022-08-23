@@ -1,0 +1,62 @@
+{
+   "appetizers": [
+    {
+        "name": "French Fries",
+        "ingredients": ["potato", "flour", "egg", "salt", "oil"],
+        "description": "Deep fried to perfection, our fries go perfectly with any meal. Size large for easy sharing."
+    },
+    {
+        "name": "Mozzarella Sticks",
+        "ingredients": ["milk", "rennet", "salt", "bread crumbs", "oregano"],
+        "description": "Creamy mozzarella cheeze, breaded, seasoned, and deepfried. Served with house marinara."
+    }
+   ], 
+   "cold sandwiches": [
+    {
+        "name": "Turkey Club Sandwich",
+        "ingredients": ["turkey", "french roll", "bacon", "cheese", "choice of toppings"],
+        "description": "Fresh, house made turkey club sandwich tailored to your exact preferences"
+    },
+    {
+        "name": "Italian Combo",
+        "ingredients": ["Salami", "prociutto", "mortadella", "Swiss cheese", "choice of bread", "choice of toppings"],
+        "description": "Selection of hand-crafted meats featured in a traditional Italian deli sandwich"
+    }
+   ],
+   "hot sandwiches": [
+    {
+        "name": "Meatball Sub",
+        "ingredients": ["beef", "lamb", "mozzarella cheeze", "marinara sauch", "choice of bread", "choice of toppings"],
+        "description": "Hot, fresh meatballs covered in house marinara covered in marinara on your choice of bread"
+    },
+    {
+        "name": "Monte Cristo",
+        "ingredients": ["french toast", "ham", "swiss", "powdered sugar", "syrup"],
+        "description": "House Specialty: Traditional Monte Cristo with ham and cheese served over french toast"
+    }
+   ],
+   "desserts": [
+    {
+        "name": "Cheese Cake",
+        "ingredients": ["graham cracker crust", "whole cream", "cream cheese", "sugar"],
+        "description": "Rich and creamy, this traditional New York cheese cake will truly amaze."
+    },
+    {
+        "name": "Fried Oreos",
+        "ingredients": ["oreos", "egg", "flour", "oil"],
+        "description": "The perfect mixture of sweet and savory to finish any meal. Must Try!"
+    }
+   ],
+   "drinks": [
+    {
+        "name": "Fountain Drink",
+        "ingredients": ["sugar", "water", "natural flavoring"],
+        "description": "refreshing and cool, choose from the following: coke, sprite, rootbeer, gingerale, orange soda, grape soda."
+    },
+    {
+        "name": "Arnold Palmer",
+        "ingredients": ["House Lemondade", "Iced Tea - Lipton's"],
+        "description": "A classic drink for any season"
+    }
+   ]
+}
