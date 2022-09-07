@@ -51,3 +51,34 @@ ReactDOM.render(
     document.getElementById("root")
     
 )
+
+/**
+Challenge: 
+
+Part 1: Create a page of your own using a custom Page component
+
+It should return an ordered list with the reasons why you're
+excited to be learning React :)
+
+Render your list to the page
+
+ */
+
+import React from "react"
+import ReactDOM from "react-dom"
+
+function CustomPage() {
+    return (
+        <div>
+            <h1>Why I love React</h1>
+            <ul>
+                <li>Composable</li>
+                <li>Declarative</li>
+                <li>Modern</li>
+                <li>Well Maintained</li>
+            </ul>
+        </div>
+    )
+}
+
+ReactDOM.render(<CustomPage />, document.getElementById("root"))
