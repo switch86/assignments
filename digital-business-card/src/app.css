@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Socials;  
+    src: url("Icons Social Media 8.ttf");
+}
+h1 {
+    font-size: 1.2rem;
+}
+h3 {
+    font-size: .9rem;
+}
+#root {
+    background: #23252c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:  'Inter', sans-serif;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 50px;
+}
+.headshot, .Info {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+}
+.Info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 244, 234);
+    margin-bottom: 0px;
+}
+.Info h1, .Info h2, .About h1, .Interests h3 {
+    color: #23252c;
+    margin: 10px 0px 0px;
+    padding-bottom: 0px;
+}
+.Info h2 {
+    color: orange;
+    font-size: .6rem;
+    font-weight: 300;
+    padding-top: 0px;
+    margin-top: 5px;
+}
+.Info h4 {
+    padding: 0px 0px;
+    margin: 15px;
+    font-size: .6rem;
+    font-weight: 300;
+}
+.Interests, .About {
+    background: white;
+    padding: 0px 20px;
+}
+
+.About p {
+    padding-top: 0px;
+    font-size: .7rem;
+    text-justify: newspaper;
+}
+.Interests p {
+    font-size: .8rem;
+    text-justify: newspaper;
+    padding-bottom: 10px;
+}
+.Footer {
+    background: #d5d4d8;
+    font-family: Socials;
+    color: #9c808b;
+    font-size: 3rem;
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    padding: 20px;
+    border-radius: 0 0 30px 30px;
+}
+.Footer a {
+    text-decoration: none;
+}
+em {
+    font-family: Socials;
+    font-style: normal;
+    color: #23252c;
+    font-size: 1.4rem;
+}
+button {
+    background: white;
+    box-shadow:  gray 1px 1px;
+    border: none;
+    /* border-top: 1px gray solid;
+    border-left: 1px gray solid; */
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+button:hover {
+    box-shadow: black 1px 1px;
+}
+button:active {
+    box-shadow: black inset 1px 1px;
+}
+button a {
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #474a56b7;
+    font-weight: 400;
+    font-size: .9rem;
+}

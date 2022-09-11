@@ -1,0 +1,6 @@
+import App from "./app.js"
+import ReactDOM from "react-dom/client"
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+        <App />
+)
