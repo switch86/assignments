@@ -1,0 +1,63 @@
+.body * {
+    background: white;
+}
+.Entry {
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    color: #2B283A;
+    border-top: #F5F7FB solid 2px;
+    font-family: 'Inter', sans-serif;
+}
+.Image {
+    width: 70%;
+    border-radius: 10px;
+    margin: 50px;
+    grid-column: 1/2;
+    place-self: center;
+}
+.Entry .Pin {
+    width: 20px;
+    padding: 0;
+}
+.Info {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+}
+.Info div {
+    display: flex;
+    place-items: center;
+    padding-top: 30px;
+}
+.Info div * {
+    padding: 0 10px;
+}
+.Entry h3 {
+    font-weight: 300;
+    font-size: .8rem;
+}
+.Entry h1 {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.Entry a {
+    color: gray;
+    font-size: .8rem;
+    text-decoration: underline;
+    font-stretch: expanded;
+}
+.Entry span {
+    font-weight: 600;
+    font-size: .7rem;
+    padding-top: 10px;
+}
+.Entry p {
+    margin: 0;
+    padding: 0;
+    font-size: .8rem;
+    
+}
