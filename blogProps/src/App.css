@@ -1,0 +1,79 @@
+
+.Header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  position: absolute;
+  color: white;
+  font-weight: 900;
+}
+.Header h1  {
+  margin: 0px;
+}
+.Header h2 {
+  margin: 10px;
+}
+.Header ul {
+  display: flex;
+  align-items: center;
+  justify-content:end;
+}
+.Header li, .Header li a {
+  padding: 25px;
+  list-style: none;
+  color: white;
+}
+.Name {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+}
+.Blog {
+  padding: 100px;
+  background-image: url("https://startbootstrap.github.io/startbootstrap-clean-blog/assets/img/home-bg.jpg");
+  background-size: cover;
+  background-position: 0 -300px;
+  text-align: center;
+}
+.Blog h1{
+  padding-top: 100px;
+}
+.BlogPosts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px grey solid;
+}
+.Card {
+  grid-column: 2/3;
+  border-bottom: grey 1px solid;
+  padding-bottom: 20px;
+}
+.Card h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.Card h2 {
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+.Card span {
+  color: gray;
+  font-style: italic;
+}
+.Older {
+  grid-column: 2/3;
+  width: 200px;
+  margin-left: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #0085a1;
+  border-radius: 0;
+  color: white;
+  font-weight: 700;
+}
+.Footer {
+  text-align: center;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+}
+

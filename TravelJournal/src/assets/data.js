@@ -23,7 +23,7 @@ export default  [
     },
     {
         id: 3,
-        title: "Gierangerfjord",
+        title: "",
         location: "Norway",
         googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         startDate: "12 Jan, 2021",
