@@ -1,0 +1,68 @@
+#root {
+    background: white;
+    color: black;
+
+}.Winter {
+    background: rgba(227, 227, 255, 0.636);
+}
+.Fall {
+    background: rgba(255, 166, 0, 0.524);
+}
+.Spring {
+    background: rgba(172, 255, 47, 0.255)
+}
+.Summer {
+    background: pink;
+}
+.Page {
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://t4.ftcdn.net/jpg/02/65/26/83/360_F_265268314_LmykO3vrtzmh3TQbBdnxj9vUczqqJXCU.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;   
+} 
+.Headline {
+    display: flex;
+    justify-content: space-between;
+}  
+.Spring, .Summer, .Winter, .Fall {
+    padding: 10px;
+    border: gray solid 2px;
+    border-radius: 10px;
+    margin: 10px 20px;
+}
+.Section {
+    background: rgba(255, 255, 255, 0.819);
+    margin: 150px 40% 50px 8%;
+    border: gray solid 2px;
+    border-radius: 10px;
+}
+.Section > h1 {
+    text-align: center;
+}
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(197, 11, 11, 0);
+    position: absolute;
+}
+.Header ul {
+    display: flex;
+}
+.Header h1 {
+    padding: 25px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.667);
+    border: gray 2px solid;
+    border-radius: 10px;
+}
+.Header li {
+    list-style: none;
+    padding: 10px;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.667);
+    border: gray 2px solid;
+    border-radius: 10px;
+}
