@@ -46,3 +46,12 @@
   height: 40px;
   border-radius: 5px;
 }
+.Meme {
+  margin: 0 25% 0 25%;
+}
+.Meme img {
+  margin: 10px 0 0 0;
+  border: black 1px solid;
+  max-width: 100%;
+  grid-column: 1/3;
+}
