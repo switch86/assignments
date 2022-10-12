@@ -1,0 +1,22 @@
+.App > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+}
+
+.red, .orange, .yellow, .green, .blue, .purple, .brown, .black, .white {
+    height: 100px; 
+    width: 100px;
+    margin: 30px;
+
+}
+.red {background: red;}
+.orange {background: orange;}
+.yellow {background:yellow;}
+.green {background: green;}
+.blue {background: blue;}
+.purple {background: purple}
+.brown {background: brown;}
+.black {background:black;}
+.white {background:white;}
+
