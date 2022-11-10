@@ -24,16 +24,14 @@ form.addEventListener("submit", (event) => {
     form.goomba.value = null 
     form.bobomb.value = null
     form.cheep.value = null
-    totalGoomba = totalGoomba + goomba
-    totalBobomb = totalBobomb + bobomb
-    totalCheep = totalCheep + cheep
-    kills = kills + goomba + bobomb + cheep
     Coins()
 })
 
 function Coins() {
     let points = [] 
     if (goomba > 0) {
+        kills = kills + goomba
+        totalGoomba = totalGoomba + goomba
         let newGoombaCoins = goomba * 5
         totalCoins = totalCoins + newGoombaCoins
         let span = document.createElement("span")
@@ -41,6 +39,8 @@ function Coins() {
         cumulativeTotal.appendChild(span)
         points.push(`${goomba} Goomba:      ${newGoombaCoins} coins`)
     } if (bobomb > 0) {
+        kills = kills + bobomb
+        totalBobomb = totalBobomb + bobomb
         let newBobombCoins = bobomb * 7
         totalCoins = totalCoins + newBobombCoins
         let span = document.createElement("span")
@@ -48,6 +48,8 @@ function Coins() {
         cumulativeTotal.appendChild(span)
         points.push(`${bobomb} Bob-omb:     ${newBobombCoins} coins`)
     } if (cheep > 0) {
+        kills = kills + cheep
+        totalCheep = totalCheep + cheep
         let newCheepCoins = cheep * 11
         totalCoins = totalCoins + newCheepCoins
         let span = document.createElement("span")
