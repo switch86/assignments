@@ -53,7 +53,7 @@ app.get("/bounty", (req, res) => {
 // get one
 app.get("/bounty/:bountyId", (req, res) => {
     const bountyId = req.params.bountyId
-    const foundBounty = bounty.find(item => item._id = bountyId)
+    const foundBounty = bounty.find(item => item._id === bountyId)
     res.send(foundBounty)
 })
 
